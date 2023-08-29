@@ -1,13 +1,23 @@
 const router = require('express').Router();
+const { User, BlogPost, Comment } = require('../models');
 
 router.get('/', async (req, res) => {
-    // fetch some data here...
-    
-    // Render a Handlebars view named 'homepage'
+    try {
+        const blogData = await BlogPost.findAll({
+            include: [User],
+        });
 
-    res.render('homepage', { /* data to pass to the view if any */ });
+        const blogs = blogData.map((blog) => blog.get({ plain: true }));
+
+        res.render('homepage', { 
+            blogs, 
+            logged_in: req.session.logged_in 
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
 });
 
-//routes for other pages, like /dashboard, /login
+// ... Add other routes for viewing individual posts, user dashboard, etc. ...
 
 module.exports = router;
