@@ -1,8 +1,10 @@
 <h1>Welcome to Tech Blog</h1>
-{{#each blogs as |blog|}}
-    <article>
-        <h2>{{blog.title}}</h2>
-        <p>{{blog.content}}</p>
-        <!-- Add other blog details here -->
-    </article>
-{{/each}}
+<div class="posts">
+    {{#each blogs as |blog|}}
+        <article>
+            <h2>{{blog.title}}</h2>
+            <p>{{blog.content}}</p>
+            <a href="/post/{{blog.id}}">Read More</a> <!-- A link to view the full post -->
+        </article>
+    {{/each}}
+</div>
