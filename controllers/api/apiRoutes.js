@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models'); // Import your models as needed.
+const { User } = require('../../models'); // Import your models as needed.
 
 // A GET route to get all users example
 
