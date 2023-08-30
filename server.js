@@ -2,7 +2,7 @@ const express = require('express');
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const exphbs = require('express-handlebars');
-const sequelize = require('./config/connection'); // Moved to the top for visibility.
+const sequelize = require('./config/connection');
 const apiRoutes = require('./controllers/api/apiRoutes');
 const homeRoutes = require('./controllers/homeRoutes');
 
@@ -13,8 +13,7 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
-app.use('/api', apiRoutes);
-app.use('/', homeRoutes);
+
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
