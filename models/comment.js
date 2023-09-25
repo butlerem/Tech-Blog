@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class BlogPost extends Model {}
+class Comment extends Model {}
 
-BlogPost.init(
+Comment.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,29 +11,37 @@ BlogPost.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        title: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
         content: {
             type: DataTypes.TEXT,
-            allowNull: false
-        },
-        userId: {
-            type: DataTypes.INTEGER,
             allowNull: false,
+            validate: {
+                len: [5, 350],
+            },
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false, 
             references: {
                 model: 'user',
                 key: 'id'
-            }
-        }
+            },
+        },
+        post_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false, 
+            references: {
+                model: 'post',
+                key: 'id'
+            },
+        },
     },
     {
         sequelize,
+        timestamps: true,
         freezeTableName: true,
         underscored: true,
-        modelName: 'blogpost'
+        modelName: 'comment',
     }
 );
 
-module.exports = BlogPost;
+module.exports = Comment;
