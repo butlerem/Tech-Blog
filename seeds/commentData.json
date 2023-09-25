@@ -1,16 +1,16 @@
 [
     {
-        "contents": "Stop blogging and start making more Krabby Patties!!!!",
+        "contents": "This blog needs more content on cybersecurity!",
         "user_id": "3",
         "post_id": "1"
     },
     {
-        "contents": "I totally agree with me.",
+        "contents": "Excellent breakdown of OOP principles.",
         "user_id": "2",
         "post_id": "2"
     },
     {
-        "contents": "Wow Squidward, you're so analytical and consise with your words and stuff!",
+        "contents": "I found this post about SQL very informative.",
         "user_id": "1",
         "post_id": "3"
     }

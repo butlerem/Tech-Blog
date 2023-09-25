@@ -1,14 +1,14 @@
 [
     {
-      "user_name" : "Spongebob",
-      "password": "password01"
+      "user_name" : "elena1",
+      "password": "elenapassword"
     },
     {
-      "user_name" : "Patrick",
-      "password": "password02"
+      "user_name" : "diana1",
+      "password": "dianapassword"
     },
     {
-      "user_name" : "Squidward",
-      "password": "password03"
+      "user_name" : "vera1",
+      "password": "verapassword"
     }
 ]

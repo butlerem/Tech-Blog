@@ -1,17 +1,17 @@
 [
     {
-        "title": "Why MVC is so important",
-        "contents": "MVC allows developers to maintain a true separation of concerns, devising their code between the Model layer for data, the View layer for design, and the Controller layer for application logic.",
+        "title": "Why Learning JavaScript is Essential",
+        "contents": "JavaScript forms the backbone of web development, making it a must-learn language for aspiring developers.",
         "user_id": "1"
     },
     {
-        "title": "Authentication vs. Authorization",
-        "contents": "There is a difference between authentication and authorization.  Authentication means confirming your own identity, whereas authorization means being allowed access to the system.",
+        "title": "Intro to Cybersecurity",
+        "contents": "Cybersecurity is a critical field that's growing in importance as our world becomes more digital.",
         "user_id": "2"
     },
     {
-        "title": "Object-Relational Mapping",
-        "contents": "I have really loved learning about ORMs.  It's a really simplified the way I create queries in SQL!",
+        "title": "How Game Development Works",
+        "contents": "Game development is a multi-faceted discipline that combines coding, art, and storytelling.",
         "user_id": "3"
     }
 ]
