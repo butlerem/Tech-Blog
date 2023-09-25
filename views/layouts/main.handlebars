@@ -2,30 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Blog</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.3/css/bulma.min.css">
 
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/">Home</a>
-            {{#if logged_in}}
-                <a href="/dashboard">Dashboard</a>
-                <a href="/logout">Logout</a>
-            {{else}}
-                <a href="/login">Login</a>
-                <a href="/signup">Sign Up</a>
-            {{/if}}
-        </nav>
-    </header>
-    <main>
-        {{{ body }}}
-    </main>
-    <footer>
-        <p>&copy; 2023 Tech Blog. All rights reserved.</p>
-    </footer>
 </body>
 </html>
