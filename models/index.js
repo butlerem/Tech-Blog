@@ -1,5 +1,5 @@
 const User = require('./user');
-const BlogPost = require('./post');
+const Post = require('./post');
 const Comment = require('./comment');
 
 // A single User can have many posts

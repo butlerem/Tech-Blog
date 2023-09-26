@@ -3,8 +3,17 @@ const { User, Post, Comment } = require('../models');
 const userData = require('./userData.json');
 const postData = require('./postData.json');
 const commentData = require('./commentData.json');
+
 const seedDatabase = async () => {
+  // Drop tables in reverse order of their dependencies
+  await Comment.drop();
+  await Post.drop();
+  await User.drop();
+
+  // Re-sync database
   await sequelize.sync({ force: true });
+
+  // Seed data
   const users = await User.bulkCreate(userData, {
     individualHooks: true,
     returning: true,
@@ -15,7 +24,7 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  const comment = await Comment.bulkCreate(commentData, {
+  const comments = await Comment.bulkCreate(commentData, {
     individualHooks: true,
     returning: true,
   });
