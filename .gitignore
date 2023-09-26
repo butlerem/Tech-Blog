@@ -1,7 +1,7 @@
 # Node specifics
 
 node_modules/
-node_modules
+/node_modules
 Node
 npm-debug.log
 package-lock.json
